@@ -6,7 +6,8 @@
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
         <div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }} mb4 mb0-ns w-100 w-40-ns">
           <a href="{{.RelPermalink}}" class="db grow">
-            <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
+            <!-- <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}"> -->
+            <img src="{{ $featured_image }}" alt="image from {{ .Title }}" style="width:100%; height:auto; object-fit:contain;">
           </a>
         </div>
       {{ end }}
@@ -16,7 +17,8 @@
             {{ .Title }}
             </a>
         </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links mid-gray"
+              style="height: 22.5em; overflow: hidden">
           {{ .Summary }}
         </div>
           <a href="{{.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a>
