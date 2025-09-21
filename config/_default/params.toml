@@ -252,3 +252,13 @@ label = "YouTube"
 color = "#cd201f"
 profile = "https://www.youtube.com/@%s"
 icon = "youtube" # font awesome brand icon name
+
+[ananke.social.networks.bilibili]
+slug = "bilibili"
+label = "Bilibili"
+color = "#0077b5"
+profile = "https://space.bilibili.com/%s"
+icon = "bilibili"
+#separator = "&"
+[ananke.social.networks.bilibili.particles]
+text = "permalink"
